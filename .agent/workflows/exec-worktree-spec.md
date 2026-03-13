@@ -1,5 +1,5 @@
 ---
-description: 檢查當前 worktree 的 git-worktree-spec.md 是否存在，讀取後依照 spec 內容執行開發任務
+description: "檢查當前 worktree 的 git-worktree-spec.md 是否存在，讀取後依照 spec 內容執行開發任務"
 ---
 
 # 執行 Worktree Feature Spec

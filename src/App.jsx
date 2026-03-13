@@ -5,6 +5,7 @@ import Features from './components/Features';
 import UseCases from './components/UseCases';
 import Pricing from './components/Pricing';
 import CallToAction from './components/CallToAction';
+import FaqSection from './components/FaqSection';
 import Footer from './components/Footer';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
                 <Features />
                 <UseCases />
                 <Pricing />
+                <FaqSection />
                 <CallToAction />
             </main>
             <Footer />

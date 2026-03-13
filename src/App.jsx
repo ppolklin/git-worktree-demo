@@ -8,6 +8,7 @@ import NewsSection from './components/NewsSection';
 import CallToAction from './components/CallToAction';
 import FaqSection from './components/FaqSection';
 import Footer from './components/Footer';
+import CookieBanner from './components/CookieBanner';
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                 <CallToAction />
             </main>
             <Footer />
+            <CookieBanner />
         </div>
     );
 }

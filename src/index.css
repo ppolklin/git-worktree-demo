@@ -1243,3 +1243,103 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================================
+   FAQ SECTION
+   ======================================== */
+.faq {
+  padding: var(--space-24) 0;
+  background: var(--color-bg);
+  position: relative;
+}
+
+.faq__list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color var(--transition-base);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.faq-item__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-8) var(--space-2);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.faq-item__title {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+  letter-spacing: 0.01em;
+}
+
+.faq-item__icon {
+  color: var(--color-text-muted);
+  transition: transform var(--transition-slow), color var(--transition-fast);
+  flex-shrink: 0;
+  margin-left: var(--space-4);
+}
+
+.faq-item__question:hover .faq-item__title {
+  color: var(--color-primary-light);
+}
+
+.faq-item--open {
+  border-bottom-color: var(--color-primary-glow);
+}
+
+.faq-item--open .faq-item__icon {
+  transform: rotate(180deg);
+  color: var(--color-primary-light);
+}
+
+.faq-item--open .faq-item__title {
+  color: var(--color-primary-light);
+}
+
+.faq-item__answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item--open .faq-item__answer-wrapper {
+  max-height: 400px;
+}
+
+.faq-item__answer {
+  padding: 0 var(--space-2) var(--space-8);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  font-size: var(--text-base);
+  max-width: 90%;
+}
+
+@media (max-width: 768px) {
+  .faq {
+    padding: var(--space-16) 0;
+  }
+  
+  .faq-item__question {
+    padding: var(--space-6) var(--space-2);
+  }
+  
+  .faq-item__title {
+    font-size: var(--text-base);
+  }
+}
